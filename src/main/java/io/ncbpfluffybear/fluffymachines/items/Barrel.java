@@ -49,11 +49,13 @@ import org.bukkit.util.Vector;
 
 public class Barrel extends NonHopperableBlock implements DoubleHologramOwner {
 
-    private final int[] inputBorder = {9, 10, 11, 12, 18, 21, 27, 28, 29, 30};
+    //堵住输入槽(19,20)
+    private final int[] inputBorder = {9, 10, 11, 12, 18, 19, 20, 21, 27, 28, 29, 30};
     private final int[] outputBorder = {14, 15, 16, 17, 23, 26, 32, 33, 34, 35};
     private final int[] plainBorder = {0, 1, 2, 3, 4, 5, 6, 7, 8, 13, 36, 37, 38, 39, 40, 41, 42, 43, 44};
 
-    protected final int[] INPUT_SLOTS = {19, 20};
+    //取消输入槽(默认19,20)
+    protected final int[] INPUT_SLOTS = {};
     protected final int[] OUTPUT_SLOTS = {24, 25};
 
     private final int STATUS_SLOT = 22;
@@ -332,6 +334,12 @@ public class Barrel extends NonHopperableBlock implements DoubleHologramOwner {
     }
 
     void acceptInput(BlockMenu inv, Block b, int slot, int capacity) {
+
+        //Input直接return
+        if(1 == 1){
+            return;
+        }
+
         if (inv.getItemInSlot(slot) == null) {
             return;
         }
