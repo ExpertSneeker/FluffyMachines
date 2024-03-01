@@ -11,17 +11,7 @@ import io.ncbpfluffybear.fluffymachines.items.FireproofRune;
 import io.ncbpfluffybear.fluffymachines.items.MiniBarrel;
 import io.ncbpfluffybear.fluffymachines.items.tools.FluffyWrench;
 import io.ncbpfluffybear.fluffymachines.items.tools.PortableCharger;
-import io.ncbpfluffybear.fluffymachines.machines.AdvancedAutoDisenchanter;
-import io.ncbpfluffybear.fluffymachines.machines.AdvancedChargingBench;
-import io.ncbpfluffybear.fluffymachines.machines.AutoAncientAltar;
-import io.ncbpfluffybear.fluffymachines.machines.AutoCraftingTable;
-import io.ncbpfluffybear.fluffymachines.machines.AutoTableSaw;
-import io.ncbpfluffybear.fluffymachines.machines.BackpackLoader;
-import io.ncbpfluffybear.fluffymachines.machines.BackpackUnloader;
-import io.ncbpfluffybear.fluffymachines.machines.ElectricDustFabricator;
-import io.ncbpfluffybear.fluffymachines.machines.ElectricDustRecycler;
-import io.ncbpfluffybear.fluffymachines.machines.SmartFactory;
-import io.ncbpfluffybear.fluffymachines.machines.WaterSprinkler;
+import io.ncbpfluffybear.fluffymachines.machines.*;
 import io.ncbpfluffybear.fluffymachines.multiblocks.CrankGenerator;
 import io.ncbpfluffybear.fluffymachines.objects.AutoCrafter;
 import org.bukkit.Color;
@@ -116,6 +106,13 @@ public class FluffyItems {
         "&7在&c高级全自动驱魔机&7中应用",
         "",
         "&6&o凝聚千年精华"
+    );
+    public static final SlimefunItemStack ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS = new SlimefunItemStack(
+            "ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS",
+            Material.NETHER_BRICK,
+            "&6碎片 - 粉尘制造机Mk2",
+            "",
+            "&7合成粉尘制造机Mk2的碎片"
     );
     public static final SlimefunItemStack HELICOPTER_HAT = new SlimefunItemStack(
         "HELICOPTER_HAT",
@@ -372,15 +369,28 @@ public class FluffyItems {
     );
 
     public static final SlimefunItemStack ELECTRIC_DUST_FABRICATOR = new SlimefunItemStack(
-        "ELECTRIC_DUST_FABRICATOR",
-        Material.BLAST_FURNACE,
-        "&6粉尘制造机",
-        "",
-        "&7一台磨石,筛粉和洗矿三合一的机器",
-        LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
-        LoreBuilder.speed(10),
-        LoreBuilderDynamic.powerBuffer(ElectricDustFabricator.CAPACITY),
-        LoreBuilderDynamic.powerPerSecond(ElectricDustFabricator.ENERGY_CONSUMPTION)
+            "ELECTRIC_DUST_FABRICATOR",
+            Material.BLAST_FURNACE,
+            "&6粉尘制造机",
+            "",
+            "&7一台磨石,筛粉和洗矿三合一的机器",
+            LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
+            LoreBuilder.speed(10),
+            LoreBuilderDynamic.powerBuffer(ElectricDustFabricator.CAPACITY),
+            LoreBuilderDynamic.powerPerSecond(ElectricDustFabricator.ENERGY_CONSUMPTION)
+    );
+
+    public static final SlimefunItemStack ELECTRIC_DUST_FABRICATOR_MK2 = new SlimefunItemStack(
+            "ELECTRIC_DUST_FABRICATOR_MK2",
+            Material.RESPAWN_ANCHOR,
+            "&6粉尘制造机 Mk2",
+            "",
+            "&7一次消耗一组原料, 生产一组矿粉",
+            "&7一台磨石,筛粉和洗矿三合一的机器",
+            LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
+            LoreBuilder.speed(10),
+            LoreBuilderDynamic.powerBuffer(ElectricDustFabricatorMk2.CAPACITY),
+            LoreBuilderDynamic.powerPerSecond(ElectricDustFabricatorMk2.ENERGY_CONSUMPTION)
     );
 
     public static final SlimefunItemStack ELECTRIC_DUST_RECYCLER = new SlimefunItemStack(

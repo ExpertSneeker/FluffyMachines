@@ -38,6 +38,7 @@ import io.ncbpfluffybear.fluffymachines.machines.AutoTableSaw;
 import io.ncbpfluffybear.fluffymachines.machines.BackpackLoader;
 import io.ncbpfluffybear.fluffymachines.machines.BackpackUnloader;
 import io.ncbpfluffybear.fluffymachines.machines.ElectricDustFabricator;
+import io.ncbpfluffybear.fluffymachines.machines.ElectricDustFabricatorMk2;
 import io.ncbpfluffybear.fluffymachines.machines.ElectricDustRecycler;
 import io.ncbpfluffybear.fluffymachines.machines.SmartFactory;
 import io.ncbpfluffybear.fluffymachines.machines.WarpPad;
@@ -410,11 +411,35 @@ public final class FluffyItemSetup {
         }).register(plugin);
 
         new ElectricDustFabricator(machines, FluffyItems.ELECTRIC_DUST_FABRICATOR,
-            RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-            SlimefunItems.ELECTRIC_ORE_GRINDER_2, SlimefunItems.ELECTRIC_ORE_GRINDER_2,
-            SlimefunItems.ELECTRIC_ORE_GRINDER_2,
-            SlimefunItems.ELECTRIC_GOLD_PAN_3, SlimefunItems.BLISTERING_INGOT_3, SlimefunItems.ELECTRIC_GOLD_PAN_3,
-            SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.ELECTRIC_DUST_WASHER_3, SlimefunItems.ELECTRIC_MOTOR
+                RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+                SlimefunItems.ELECTRIC_ORE_GRINDER_2, SlimefunItems.ELECTRIC_ORE_GRINDER_2,
+                SlimefunItems.ELECTRIC_ORE_GRINDER_2,
+                SlimefunItems.ELECTRIC_GOLD_PAN_3, SlimefunItems.BLISTERING_INGOT_3, SlimefunItems.ELECTRIC_GOLD_PAN_3,
+                SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.ELECTRIC_DUST_WASHER_3, SlimefunItems.ELECTRIC_MOTOR
+        }).register(plugin);
+
+        new ElectricDustFabricatorMk2(misc, FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
+                RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+                FluffyItems.ELECTRIC_DUST_FABRICATOR,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR
+        }).register(plugin);
+
+        new ElectricDustFabricatorMk2(machines, FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2,
+                RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+                FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
+                FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS
         }).register(plugin);
 
         new ElectricDustRecycler(machines, FluffyItems.ELECTRIC_DUST_RECYCLER,
