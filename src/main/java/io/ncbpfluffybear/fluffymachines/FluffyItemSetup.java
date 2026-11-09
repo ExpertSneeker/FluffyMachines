@@ -418,7 +418,9 @@ public final class FluffyItemSetup {
                 SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.ELECTRIC_DUST_WASHER_3, SlimefunItems.ELECTRIC_MOTOR
         }).register(plugin);
 
-        new ElectricDustFabricatorMk2(misc, FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
+        // 碎片只是合成材料（下界砖，不可放置），注册为普通物品；
+        // 新版 Slimefun 会校验机器物品必须是方块，注册成机器会失败，导致 Mk2 无法合成
+        new SlimefunItem(misc, FluffyItems.ELECTRIC_DUST_FABRICATOR_MK2_DEBRIS,
                 RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 FluffyItems.ELECTRIC_DUST_FABRICATOR,
                 FluffyItems.ELECTRIC_DUST_FABRICATOR,
